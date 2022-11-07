@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_flutter_app/theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
-      theme: ThemeData(scaffoldBackgroundColor: _bgColor),
+      theme: appTheme,
       home: Scaffold(
         appBar: AppBar(
           title: const Text(_title),
