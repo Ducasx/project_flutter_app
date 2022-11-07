@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:MyApp/landing/landing_page.dart';
-import 'package:MyApp/theme.dart';
+import 'package:project_flutter_app/landing/landing_page.dart';
+import 'package:project_flutter_app/theme.dart';
 
 void main() => runApp(const MyApp());
 
