@@ -7,6 +7,7 @@ String _title = "De Luca's App";
 
 var appTheme = ThemeData(
   //defines default brightness and color
+  brightness: Brightness.light,
   primaryColor: Colors.lightBlue[800],
   backgroundColor: Colors.lightBlue[300],
 
@@ -35,23 +36,18 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
         body: ListView(
-          padding: const EdgeInsets.all(20),
-          children: <Widget>[
-            Container(
-              height: 50,
-              color: Colors.amber[600],
-              child: const Center(child: Text('Entry A')),
+          children: [
+            const Text(
+              "Welcome to my app",
+              textAlign: TextAlign.center,
             ),
             Container(
-              height: 50,
-              color: Colors.amber[500],
-              child: const Center(child: Text('Entry B')),
+              color: Colors.blueAccent,
+              child: const FlutterLogo(
+                size: 150,
+              ),
             ),
-            Container(
-              height: 50,
-              color: Colors.amber[300],
-              child: const Center(child: Text('Entry C')),
-            ),
+            Container(),
           ],
         ),
       ),
