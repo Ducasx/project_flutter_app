@@ -4,8 +4,6 @@ import 'package:project_flutter_app/theme.dart';
 void main() => runApp(const MyApp());
 
 const String _title = "De Luca's App";
-const Color _bgColor = Color.fromARGB(255, 193, 219, 230);
-const Color _bgDarkerColor = Color.fromARGB(255, 95, 181, 218);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,7 +17,6 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(_title),
-          backgroundColor: _bgDarkerColor,
           centerTitle: true,
         ),
         body: ListView(
