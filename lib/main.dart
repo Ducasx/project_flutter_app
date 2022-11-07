@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
 
-const String _title = "De Luca's App";
-const Color _bgColor = Color.fromARGB(255, 193, 219, 230);
-const Color _bgDarkerColor = Color.fromARGB(255, 95, 181, 218);
+String _title = "De Luca's App";
+
+var appTheme = ThemeData(
+  //defines default brightness and color
+  brightness: Brightness.dark,
+  primaryColor: Colors.lightBlue[800],
+  backgroundColor: Colors.lightBlue[300],
+
+  //defines fontFamily used
+  fontFamily: GoogleFonts.robotoSlab().fontFamily,
+
+  //defines
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,15 +25,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
-      theme: ThemeData(scaffoldBackgroundColor: _bgColor),
+      theme: appTheme,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(_title),
-          backgroundColor: _bgDarkerColor,
+          title: Text(_title),
           centerTitle: true,
         ),
         body: ListView(
-          padding: const EdgeInsets.all(50),
+          padding: const EdgeInsets.all(20),
           children: <Widget>[
             Container(
               height: 50,
