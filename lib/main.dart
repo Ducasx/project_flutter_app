@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
+const String _title = "De Luca's App";
+const Color _bgColor = Color.fromARGB(255, 193, 219, 230);
+const Color _bgDarkerColor = Color.fromARGB(255, 95, 181, 218);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  static const String _title = 'De Lucas App';
-  static const Color _bgColor = Color.fromARGB(255, 193, 219, 230);
-  static const Color _bgDarkerColor = Color.fromARGB(255, 95, 181, 218);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(scaffoldBackgroundColor: _bgColor),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Progetto Flutter di De Luca'),
+          title: const Text(_title),
           backgroundColor: _bgDarkerColor,
           centerTitle: true,
         ),
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               height: 50,
-              color: Colors.amber[100],
+              color: Colors.amber[300],
               child: const Center(child: Text('Entry C')),
             ),
           ],
