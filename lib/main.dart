@@ -7,14 +7,17 @@ String _title = "De Luca's App";
 
 var appTheme = ThemeData(
   //defines default brightness and color
-  brightness: Brightness.dark,
   primaryColor: Colors.lightBlue[800],
   backgroundColor: Colors.lightBlue[300],
 
   //defines fontFamily used
   fontFamily: GoogleFonts.robotoSlab().fontFamily,
 
-  //defines
+  //defines text sizes and weighs
+  textTheme: const TextTheme(
+    bodyText1: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+    bodyText2: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+  ),
 );
 
 class MyApp extends StatelessWidget {
