@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_flutter_app/theme.dart';
+import 'home_page.dart';
 
 void main() => runApp(const MyApp());
-
-const String _title = "De Luca's App";
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,34 +10,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: _title,
-      theme: appTheme,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(_title),
-          centerTitle: true,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.grey,
         ),
-        body: ListView(
-          padding: const EdgeInsets.all(50),
-          children: <Widget>[
-            Container(
-              height: 50,
-              color: Colors.amber[600],
-              child: const Center(child: Text('Entry A')),
-            ),
-            Container(
-              height: 50,
-              color: Colors.amber[500],
-              child: const Center(child: Text('Entry B')),
-            ),
-            Container(
-              height: 50,
-              color: Colors.amber[300],
-              child: const Center(child: Text('Entry C')),
-            ),
-          ],
-        ),
+        scaffoldBackgroundColor: const Color(0xFFF8F7FF),
       ),
+      home: const Homepage(),
     );
   }
 }
