@@ -8,21 +8,24 @@ class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: ListView(
         children: [
-          const Text(
-            "Welcome",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
+          const Center(
+            child: Text(
+              "Welcome",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              ),
             ),
           ),
           const SizedBox(height: 20),
-          const Text(
-            "Please enjoy the stay while you admire at nothingness.",
-            style: TextStyle(
-              fontSize: 14,
+          const Center(
+            child: Text(
+              "Please enjoy the stay while you admire at nothingness.",
+              style: TextStyle(
+                fontSize: 14,
+              ),
             ),
           ),
           Padding(
